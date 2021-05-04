@@ -28,7 +28,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
     private WebElement addtoCasher;
 
-    @FindBy(css = "#product_1_1_0_449687 > td.cart_quantity.text-center > input.cart_quantity_input.form-control.grey")
+    @FindBy(css = "[id^='product'] > td.cart_quantity.text-center > input.cart_quantity_input.form-control.grey")
     private WebElement quantity;
 
     @FindBy(xpath = "//*[@id=\"center_column\"]/ul/li/a")
