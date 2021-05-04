@@ -1,4 +1,4 @@
-Feature: YourLogo sign in page test
+Feature: Order test
 
   Background:
     Given The AutomationPractice site is open
@@ -10,7 +10,7 @@ Feature: YourLogo sign in page test
     When The Sign In button is clicked
     Then Go back to home
     When The Product 1 is added to the cart
-    Then Go to the casher
+    Then Go to the cashier
     Then Change the quantity to 10
     Then Go payment
     Then Proceed to checkout

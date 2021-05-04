@@ -63,7 +63,7 @@ public class StepDefinitions {
     public void theMsgMessageIsShown(String msg) {
     }
 
-    @Then("Go to the casher")
+    @Then("Go to the cashier")
     public void gotoCasher(){homePage.goCasher();}
 
     @Then("Change the quantity to 10")

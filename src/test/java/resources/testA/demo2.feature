@@ -1,4 +1,4 @@
-Feature: YourLogo sign in page test
+Feature: Search test
 
   Background:
     Given The AutomationPractice site is open
