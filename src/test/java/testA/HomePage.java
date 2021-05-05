@@ -35,6 +35,11 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
     private WebElement addtoCasher;
 
+    @FindBy(id = "email_create")
+    private WebElement createAccount;
+
+    public void createAccountemail(String s){createAccount.sendKeys(s);}
+
     @FindBy(css = "[id^='product'] > td.cart_quantity.text-center > input.cart_quantity_input.form-control.grey")
     private WebElement quantity;
 
@@ -61,6 +66,11 @@ public class HomePage {
         Select size = new Select(driver.findElement(By.id("group_1")));
         size.selectByValue("2");
 
+    }
+
+    public void changeState(){
+        Select size = new Select(driver.findElement(By.id("id_state")));
+        size.selectByValue("2");
     }
 
     @FindBy(id = "cgv")
@@ -158,4 +168,76 @@ public class HomePage {
         }
     }
 
+    @FindBy(css = "#account-creation_form > div:nth-child(1) > div.clearfix > div:nth-child(3) > label")
+    private WebElement Mr;
+
+    public void clickMr() {Mr.click();
+    }
+
+    @FindBy(id = "customer_firstname")
+    private WebElement firstname;
+
+    @FindBy(id = "firstname")
+    private WebElement firstname2;
+
+    public void FirstNameInput(String s) {
+        firstname.sendKeys(s);
+        firstname2.sendKeys(s);
+    }
+
+    @FindBy(id = "customer_lastname")
+    private WebElement lastname;
+
+    @FindBy(id = "lastname")
+    private WebElement lastname2;
+
+    public void LastNameInput(String last) {
+        lastname.sendKeys(last);
+        lastname2.sendKeys(last);
+    }
+
+    @FindBy(id = "SubmitCreate")
+    private WebElement submitCreate;
+
+    public void clickCreate() {submitCreate.click();
+    }
+
+    @FindBy(id = "email")
+    private WebElement email;
+    public void inputEmail(String s) {
+        email.sendKeys(s);
+    }
+
+    @FindBy(id = "passwd")
+    private WebElement pass;
+
+    public void inputPass(String string) {
+        pass.sendKeys(string);
+    }
+
+    @FindBy(id = "address1")
+    private WebElement address1;
+
+    @FindBy(id = "city")
+    private WebElement city1;
+
+    @FindBy(id = "postcode")
+    private WebElement postcode1;
+
+    public void addEvery(String address, String city, String zip) {
+        address1.sendKeys(address);
+        city1.sendKeys(city);
+        postcode1.sendKeys(zip);
+    }
+
+    @FindBy(id = "phone_mobile")
+    private WebElement phone_mobile;
+
+    public void addMobile() {
+        phone_mobile.sendKeys("012345678");
+    }
+
+    @FindBy(id = "submitAccount")
+    private WebElement submitAccount;
+    public void submitAccount() {submitAccount.click(); }
 }

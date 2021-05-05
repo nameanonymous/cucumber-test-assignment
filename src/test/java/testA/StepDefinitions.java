@@ -8,6 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.concurrent.TimeUnit;
 
@@ -78,6 +79,19 @@ public class StepDefinitions {
     @Then("Go to the cashier")
     public void gotoCasher(){homePage.goCasher();}
 
+    @When("Create an account start, the filed is {string} and email is {string}")
+    public void createAccount(String field,String email){homePage.fillField(field,email);}
+
+    @Then("Click Mr")
+    public void clickMr(){homePage.clickMr();}
+
+    @Then("Input First name {string}")
+    public void FirstName(String first){homePage.FirstNameInput(first);}
+
+    @Then("Input Last name {string}")
+    public void LastName(String last){homePage.LastNameInput(last);}
+
+
     @Then("Change the quantity to 10")
     public void changeQuantity(){homePage.changeQty("0"); }
 
@@ -107,4 +121,34 @@ public class StepDefinitions {
 
     @Then("log out")
     public void logout(){homePage.logout();}
+
+
+    @Then("Click Create")
+    public void clickCreate() {
+        homePage.clickCreate();
+    }
+
+    @Then("Input email {string}")
+    public void inputEmailEmail(String string) {
+        homePage.inputEmail(string);
+    }
+
+    @Then("Input Pass {string}")
+    public void inputPassPass(String string) {
+        homePage.inputPass(string);
+    }
+
+    @Then("Add address {string} and City {string} and zip {string}")
+    public void AddEverything(String address,String ctiy, String zip){
+        homePage.addEvery(address,ctiy,zip);
+    }
+
+    @Then("Change State")
+    public void ChangeState(){homePage.changeState();}
+
+    @Then("Add mobile")
+    public void addMobile(){homePage.addMobile();}
+
+    @Then("Submit account")
+    public void submitAccount(){homePage.submitAccount();}
 }
