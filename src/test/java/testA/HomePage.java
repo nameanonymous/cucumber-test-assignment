@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,6 +46,22 @@ public class HomePage {
 
     @FindBy(css = "#center_column > form > p > button")
     private WebElement proCheck;
+
+    @FindBy(css = "#center_column > ul > li > div > div.right-block > div.button-container > a.button.lnk_view.btn.btn-default")
+    private WebElement getMoreD;
+
+    public void getMore(){getMoreD.click();}
+
+    @FindBy(name = "Submit")
+    private WebElement submit;
+
+    public void submitClick(){submit.click();}
+
+    public void changeSize(){
+        Select size = new Select(driver.findElement(By.id("group_1")));
+        size.selectByValue("2");
+
+    }
 
     @FindBy(id = "cgv")
     private WebElement TandC;

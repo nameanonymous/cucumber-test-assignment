@@ -44,6 +44,9 @@ public class StepDefinitions {
     @When("Search the womens cloths")
     public void searchStarted(){homePage.clickSearchButton();}
 
+    @Then("Submit")
+    public void changeSize(){homePage.submitClick();}
+
     @When("The Sign In button is clicked")
     public void theSignInButtonIsClicked() {
         homePage.clickSignInButton();
@@ -69,11 +72,17 @@ public class StepDefinitions {
     @When("The Product 2 is added to the cart")
     public  void addedProduct2toCart(){homePage.clickaddtoCart2();}
 
+    @Then("Get more details")
+    public void getMoreDetails(){homePage.getMore();}
+
     @Then("Go to the cashier")
     public void gotoCasher(){homePage.goCasher();}
 
     @Then("Change the quantity to 10")
     public void changeQuantity(){homePage.changeQty("0"); }
+
+    @Then("Change the size to M")
+    public void sizeChange(){homePage.changeSize();}
 
     @Then("Go back to home")
     public void backHome(){homePage.backH();}
