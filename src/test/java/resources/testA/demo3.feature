@@ -10,6 +10,8 @@ Feature: Order test
     When The Sign In button is clicked
     Then Go back to home
     When The Product 1 is added to the cart
+    Then Continue Shopping
+    When The Product 2 is added to the cart
     Then Go to the cashier
     Then Change the quantity to 10
     Then Go payment

@@ -63,6 +63,12 @@ public class StepDefinitions {
     public void theMsgMessageIsShown(String msg) {
     }
 
+    @Then("Continue Shopping")
+    public void continueShop(){homePage.continueShopping();}
+
+    @When("The Product 2 is added to the cart")
+    public  void addedProduct2toCart(){homePage.clickaddtoCart2();}
+
     @Then("Go to the cashier")
     public void gotoCasher(){homePage.goCasher();}
 

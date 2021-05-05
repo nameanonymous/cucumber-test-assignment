@@ -25,6 +25,12 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"homefeatured\"]/li[1]/div/div[2]/div[2]/a[1]")
     private WebElement getproduct1;
 
+    @FindBy(css = "#layer_cart > div.clearfix > div.layer_cart_cart.col-xs-12.col-md-6 > div.button-container > span")
+    private WebElement goBack;
+
+    @FindBy(xpath = "//*[@id=\"homefeatured\"]/li[2]/div/div[2]/div[2]/a[1]")
+    private WebElement getproduct2;
+
     @FindBy(xpath = "//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
     private WebElement addtoCasher;
 
@@ -73,6 +79,10 @@ public class HomePage {
     }
 
     public void clickaddtoCart(){getproduct1.click();}
+
+    public void clickaddtoCart2(){getproduct2.click();}
+
+    public void continueShopping(){goBack.click();}
 
     public void goCasher(){addtoCasher.click();}
 
